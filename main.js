@@ -3738,18 +3738,22 @@ function scaleViewportSize(value) {
   return value * getViewportScale();
 }
 
+function scaleVrmSize(value) {
+  return value;
+}
+
 function applyVrmSettings() {
   if (displayMode === 'avatar') {
     const avatarScale = 180;
     vrmCanvas.style.left = '50%';
     vrmCanvas.style.bottom = '0px';
-    vrmCanvas.style.width = `${scaleViewportSize((VRM_BASE_WIDTH * avatarScale) / 100)}px`;
-    vrmCanvas.style.height = `${scaleViewportSize((VRM_BASE_HEIGHT * avatarScale) / 100)}px`;
+    vrmCanvas.style.width = `${scaleVrmSize((VRM_BASE_WIDTH * avatarScale) / 100)}px`;
+    vrmCanvas.style.height = `${scaleVrmSize((VRM_BASE_HEIGHT * avatarScale) / 100)}px`;
   } else {
     vrmCanvas.style.left = `calc(50% + ${scaleViewportX(vrmSettings.posX)}px)`;
     vrmCanvas.style.bottom = `${scaleViewportY(vrmSettings.posY)}px`;
-    vrmCanvas.style.width = `${scaleViewportSize((VRM_BASE_WIDTH * vrmSettings.scale) / 100)}px`;
-    vrmCanvas.style.height = `${scaleViewportSize((VRM_BASE_HEIGHT * vrmSettings.scale) / 100)}px`;
+    vrmCanvas.style.width = `${scaleVrmSize((VRM_BASE_WIDTH * vrmSettings.scale) / 100)}px`;
+    vrmCanvas.style.height = `${scaleVrmSize((VRM_BASE_HEIGHT * vrmSettings.scale) / 100)}px`;
   }
 
   if (vrmRenderer3D && vrmCamera3D) {
