@@ -927,5 +927,24 @@
   <audio id="ambient-rain" src="./assets/rain_sound.mp3" loop></audio> <!-- Fallback to bgm if rain sound not loaded -->
 
   <script type="module" src="main.js"></script>
+  <script>
+    (() => {
+      const button = document.getElementById("btn-chat");
+      const modal = document.getElementById("chat-iframe-modal");
+      const close = document.getElementById("chat-iframe-close");
+      const backdrop = document.getElementById("chat-iframe-backdrop");
+      const setOpen = (open) => {
+        modal.classList.toggle("active", open);
+        modal.setAttribute("aria-hidden", String(!open));
+        button.classList.toggle("active", open);
+      };
+      button.addEventListener("click", () => setOpen(!modal.classList.contains("active")));
+      close.addEventListener("click", () => setOpen(false));
+      backdrop.addEventListener("click", () => setOpen(false));
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") setOpen(false);
+      });
+    })();
+  </script>
 </body>
 </html>

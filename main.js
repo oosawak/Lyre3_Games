@@ -2714,8 +2714,6 @@ bgmUrlAddBtn.addEventListener('click', () => {
 
 renderBgmPlaylist();
 
-const chatModal = document.getElementById("chat-iframe-modal"); const chatButton = document.getElementById("btn-chat"); const chatCloseButton = document.getElementById("chat-iframe-close"); const chatBackdrop = document.getElementById("chat-iframe-backdrop"); function closeChatModal() { chatModal.classList.remove("active"); chatModal.setAttribute("aria-hidden", "true"); chatButton.classList.remove("active"); } chatButton.addEventListener("click", () => { closeOtherDrawers(); const isOpen = chatModal.classList.toggle("active"); chatModal.setAttribute("aria-hidden", String(!isOpen)); chatButton.classList.toggle("active", isOpen); }); chatCloseButton.addEventListener("click", closeChatModal); chatBackdrop.addEventListener("click", closeChatModal); document.addEventListener("keydown", (event) => { if (event.key === "Escape" && chatModal.classList.contains("active")) closeChatModal(); });
-
 // Drawers share the same slot, so opening one closes the others
 function closeOtherDrawers(except) {
   [[todoPanel, btnTodo], [settingsPanel, btnSettings], [sshPanel, btnSsh], [workshopPanel, btnWorkshop], [launcherPanel, btnLauncher], [aiDockPanel, null]].forEach(([panel, btn]) => {
