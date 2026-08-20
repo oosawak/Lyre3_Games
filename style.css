@@ -3136,7 +3136,7 @@ html body.ai-dock-mode .overlay::after {
 }
 
 /* Lyre3 Chat side panel */
-.chat-iframe-modal { position: absolute; inset: 28px -540px 28px auto; z-index: 100; width: min(480px, calc(100vw - 110px)); display: flex; align-items: stretch; padding: 0; transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1); pointer-events: none; }
+.chat-iframe-modal { position: absolute; inset: 28px -700px 28px auto; z-index: 100; width: min(640px, calc(100vw - 110px)); display: flex; align-items: stretch; padding: 0; transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1); pointer-events: none; }
 .chat-iframe-modal.active { right: 92px; pointer-events: auto; }
 .chat-iframe-backdrop { display: none; }
 .chat-iframe-window { width: 100%; height: 100%; border-radius: 24px; }
