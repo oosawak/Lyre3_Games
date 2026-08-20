@@ -1655,6 +1655,8 @@ html body.ui-theme-zany .overlay {
   display: none !important;
 }
 
+/* Lyre3 Chat iframe modal */ .chat-iframe-modal { position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center; padding: 28px; } .chat-iframe-modal.active { display: flex; } .chat-iframe-backdrop { position: absolute; inset: 0; background: rgba(3, 6, 12, 0.72); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); } .chat-iframe-window { position: relative; z-index: 1; width: min(1100px, 92vw); height: min(760px, 88vh); display: flex; flex-direction: column; overflow: hidden; background: rgba(8, 10, 16, 0.94); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 24px; box-shadow: 0 24px 80px rgba(0, 0, 0, 0.58); } .chat-iframe-header { min-height: 58px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px 0 22px; color: #fff; border-bottom: 1px solid rgba(255, 255, 255, 0.12); } .chat-iframe-header h2 { margin: 0; font-size: 16px; font-weight: 600; } .chat-iframe-window iframe { width: 100%; flex: 1; min-height: 0; border: 0; background: #10141c; } @media (max-width: 640px) { .chat-iframe-modal { padding: 12px; } .chat-iframe-window { width: 100%; height: calc(100vh - 24px); border-radius: 18px; } }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
