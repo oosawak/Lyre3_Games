@@ -3742,6 +3742,10 @@ function scaleVrmSize(value) {
   return value;
 }
 
+function scaleGlbSize(value) {
+  return value;
+}
+
 function applyVrmSettings() {
   if (displayMode === 'avatar') {
     const avatarScale = 180;
@@ -3770,8 +3774,8 @@ function applyGlbSettings() {
   glbCanvas.style.left = `calc(50% + ${scaleViewportX(glbSettings.posX)}px)`;
   glbCanvas.style.right = 'auto';
   glbCanvas.style.bottom = `${scaleViewportY(glbSettings.posY)}px`;
-  glbCanvas.style.width = `${scaleViewportSize((GLB_BASE_WIDTH * glbSettings.scale) / 100)}px`;
-  glbCanvas.style.height = `${scaleViewportSize((GLB_BASE_HEIGHT * glbSettings.scale) / 100)}px`;
+  glbCanvas.style.width = `${scaleGlbSize((GLB_BASE_WIDTH * glbSettings.scale) / 100)}px`;
+  glbCanvas.style.height = `${scaleGlbSize((GLB_BASE_HEIGHT * glbSettings.scale) / 100)}px`;
 
   if (glbRenderer3D && glbCamera3D) {
     glbRenderer3D.setSize(glbCanvas.clientWidth, glbCanvas.clientHeight);
