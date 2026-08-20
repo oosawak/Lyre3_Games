@@ -3134,3 +3134,11 @@ html body.ai-dock-mode .overlay::after {
   background: transparent !important;
   background-image: none !important;
 }
+
+/* Lyre3 Chat side panel */
+.chat-iframe-modal { position: absolute; inset: 28px -440px 28px auto; z-index: 100; width: min(380px, calc(100vw - 110px)); display: flex; align-items: stretch; padding: 0; transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1); pointer-events: none; }
+.chat-iframe-modal.active { right: 92px; pointer-events: auto; }
+.chat-iframe-backdrop { display: none; }
+.chat-iframe-window { width: 100%; height: 100%; border-radius: 24px; }
+.chat-iframe-header { flex-shrink: 0; }
+@media (max-width: 640px) { .chat-iframe-modal { inset: 12px -100vw 12px auto; width: calc(100vw - 84px); } .chat-iframe-modal.active { right: 72px; } .chat-iframe-window { height: 100%; border-radius: 18px; } }
