@@ -3668,7 +3668,7 @@ function loadGlbModel(url) {
 // ==========================================
 const MODEL_POSITION_MODE = 'center';
 const VRM_DEFAULTS = { posX: 214, posY: -764, scale: 300, rotation: -14 };
-const GLB_DEFAULTS = { posX: -367, posY: -537, scale: 296, rotation: -33 };
+const GLB_DEFAULTS = { posX: -367, posY: -702, scale: 296, rotation: -33 };
 const GLB_CHAIR_DEFAULTS = { posX: 74, posY: -6, posZ: 2, scale: 109, rotation: -103 };
 const VRM_BASE_WIDTH = 500;
 const VRM_BASE_HEIGHT = 600;
